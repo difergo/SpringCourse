@@ -14,12 +14,15 @@
 <bean id="myEmployee" class="es.pildoras.IoC.DirectorEmpleado">
 <constructor-arg ref="myInform"></constructor-arg>
 </bean>
+
 <bean id="myEmployee2" class="es.pildoras.IoC.JefeEmpleado">
 <constructor-arg ref="myInform"></constructor-arg>
 </bean>
 
 
-
+<bean id="myEmployee3" class="es.pildoras.IoC.SecretarioEmpleado">
+	<property name="informeNuevo" ref="myInform"></property>
+</bean>
 
 
 

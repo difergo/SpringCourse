@@ -2,6 +2,10 @@ package es.pildoras.IoC;
 
 public class SecretarioEmpleado implements Empleado {
 
+	public void setInformeNuevo(CreacionInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
+	}
+	
 	@Override
 	public String getTareas() {
 		return "Gestionar la agenda de los jefes";
@@ -10,7 +14,9 @@ public class SecretarioEmpleado implements Empleado {
 	@Override
 	public String getInforme() {
 		// TODO Auto-generated method stub
-		return null;
+		return "Informe generado por el secretario: " + informeNuevo.getInforme();
 	}
+	
+	private CreacionInformes informeNuevo;
 
 }
