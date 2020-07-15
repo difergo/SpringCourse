@@ -1,11 +1,34 @@
 package es.pildoras.Annotations;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado")
 public class ComercialExperimentado implements Empleado {
+	
+	// Se  ejecuta despues de creacion del bean
+	
+	@PostConstruct
+	public void postBean() {
+		System.out.println("___________________________________");
+		System.out.println("Ejecutado tras creación de bean");
+		System.out.println("-----------------------------------");
+	}
+	
+	// Se ejecuta despues de apagado el contenedor de spring
+	
+	@PreDestroy
+	public void preDestry() {
+		System.out.println("___________________________________");
+		System.out.println("Ejecutando antes de la destrucción del contenedor de spring");
+		System.out.println("-----------------------------------");
+	}
+	
+	// Tener en cuenta que estos metodos no funcionan si la clase utiliza el scope=prototype
 
 	// Autowired con el contructor
 	/*@Autowired

@@ -21,6 +21,8 @@ public class UsoAnnotations {
 		System.out.println("Lucía:   "+Lucia);
 		System.out.println();
 		
+		System.out.println();
+		
 		System.out.println("Comercial novato");
 		
 		Empleado Juan=context.getBean("ComercialNoob", Empleado.class);
@@ -35,7 +37,8 @@ public class UsoAnnotations {
 		System.out.println("Ana:  "+Ana);
 		System.out.println();
 		
-		
+		context.close();
+		//Si no se ejecuta el close, no se ejecutan los metodos asocidos al destroy (@PreDestroy)
 		
 	}
 
