@@ -1,9 +1,15 @@
 package es.pildoras.Annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado")
 public class ComercialExperimentado implements Empleado {
+
+	@Autowired
+	public ComercialExperimentado(CreacionInformeFinanciero nuevoInforme) {
+		this.nuevoInforme = nuevoInforme;
+	}
 
 	@Override
 	public String getTareas() {
@@ -12,7 +18,9 @@ public class ComercialExperimentado implements Empleado {
 
 	@Override
 	public String getInofrme() {
-		return "Informe de ventas del comercial.";
+		return nuevoInforme.getInformefinanciero();
 	}
+	
+	private CreacionInformeFinanciero nuevoInforme;
 
 }
