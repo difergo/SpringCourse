@@ -9,6 +9,8 @@
 	http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
+<context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
+
 <bean id="myInform" class="es.pildoras.IoC.Informe"></bean>
 
 <bean id="myEmployee" class="es.pildoras.IoC.DirectorEmpleado">
@@ -24,14 +26,14 @@
 	<!-- To set a property, the property name must be the method name without the word "set" and using lower camel case syntax -->
 	
 	<property name="informeNuevo" ref="myInform"></property>
-	<property name="email" value="secretary@company.com"></property>
-	<property name="nombreEmpresa" value="company"></property>
+	<property name="email" value="${email_secretary}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
 <bean id="mySecondDirector" class="es.pildoras.IoC.DirectorEmpleado">
 	<constructor-arg ref="myInform"></constructor-arg>
-	<property name="email" value="management@company.com"></property>
-	<property name="nombreEmpresa" value="company"></property>
+	<property name="email" value="${email_director}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
 
