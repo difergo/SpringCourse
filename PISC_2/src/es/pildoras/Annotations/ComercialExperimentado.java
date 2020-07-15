@@ -1,6 +1,7 @@
 package es.pildoras.Annotations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component("ComercialExperimentado")
@@ -28,7 +29,9 @@ public class ComercialExperimentado implements Empleado {
 		return nuevoInforme.getInformefinanciero();
 	}
 
+	//Autowired a nivel del atributo
 	@Autowired
+	@Qualifier("informeFinancieroTrim4")
 	private CreacionInformeFinanciero nuevoInforme;
 
 }
