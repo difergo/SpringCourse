@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildoras.IoC.DependencyInjection;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

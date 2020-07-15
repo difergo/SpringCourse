@@ -11,18 +11,18 @@
 
 <context:property-placeholder location="classpath:datosEmpresa.propiedades"/>
 
-<bean id="myInform" class="es.pildoras.IoC.Informe"></bean>
+<bean id="myInform" class="es.pildoras.IoC.DependencyInjection.Informe"></bean>
 
-<bean id="myEmployee" class="es.pildoras.IoC.DirectorEmpleado">
+<bean id="myEmployee" class="es.pildoras.IoC.DependencyInjection.DirectorEmpleado">
 <constructor-arg ref="myInform"></constructor-arg>
 </bean>
 
-<bean id="myEmployee2" class="es.pildoras.IoC.JefeEmpleado">
+<bean id="myEmployee2" class="es.pildoras.IoC.DependencyInjection.JefeEmpleado">
 <constructor-arg ref="myInform"></constructor-arg>
 </bean>
 
 
-<bean id="myEmployee3" class="es.pildoras.IoC.SecretarioEmpleado">
+<bean id="myEmployee3" class="es.pildoras.IoC.DependencyInjection.SecretarioEmpleado">
 	<!-- To set a property, the property name must be the method name without the word "set" and using lower camel case syntax -->
 	
 	<property name="informeNuevo" ref="myInform"></property>
@@ -30,7 +30,7 @@
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
-<bean id="mySecondDirector" class="es.pildoras.IoC.DirectorEmpleado">
+<bean id="mySecondDirector" class="es.pildoras.IoC.DependencyInjection.DirectorEmpleado">
 	<constructor-arg ref="myInform"></constructor-arg>
 	<property name="email" value="${email_director}"></property>
 	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>

@@ -1,20 +1,25 @@
-package es.pildoras.IoC;
+package es.pildoras.IoC.DependencyInjection;
 
-public class SecretarioEmpleado implements Empleado {
+public class DirectorEmpleado implements Empleado {
 
-	public void setInformeNuevo(CreacionInformes informeNuevo) {
-		this.informeNuevo = informeNuevo;
+	//Creacion de campo tipo creación informe (interfaz)
+	
+	private CreacionInformes informeNuevo;
+	
+	public DirectorEmpleado(CreacionInformes informeNuevo) {
+		this.informeNuevo=informeNuevo;
 	}
 	
 	@Override
 	public String getTareas() {
-		return "Gestionar la agenda de los jefes";
+		// TODO Auto-generated method stub
+		return "Gestionar la plantilla de la empresa";
 	}
 
 	@Override
 	public String getInforme() {
 		// TODO Auto-generated method stub
-		return "Informe generado por el secretario: " + informeNuevo.getInforme();
+		return "Informe creado por el director: " + informeNuevo.getInforme();
 	}
 	
 	public String getEmail() {
@@ -33,12 +38,9 @@ public class SecretarioEmpleado implements Empleado {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 	
-
-	private CreacionInformes informeNuevo;
 	
 	private String email;
 	
 	private String nombreEmpresa;
-	
 
 }

@@ -1,4 +1,4 @@
-package es.pildoras.IoC;
+package es.pildoras.IoC.DependencyInjection;
 
 public class Informe implements CreacionInformes {
 
