@@ -38,6 +38,18 @@ public class DirectorEmpleado implements Empleado {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 	
+	// Método init. Ejecutar tareas antes de que el bean esté disponible
+	
+	public void metodoInicial() {
+		System.out.println("Ejecutando metodo init");
+		System.out.println("");
+	}
+	
+	// Método destroy. Ejecutar tareas despues de que el bean haya sido usado
+	
+	public void metodoFinal() {
+		System.out.println("Ejecutando metodo destroy");
+	}
 	
 	private String email;
 	

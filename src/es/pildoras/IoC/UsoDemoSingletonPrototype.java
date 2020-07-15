@@ -2,6 +2,7 @@ package es.pildoras.IoC;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import es.pildoras.IoC.DependencyInjection.DirectorEmpleado;
 import es.pildoras.IoC.DependencyInjection.Empleado;
 import es.pildoras.IoC.DependencyInjection.SecretarioEmpleado;
 
@@ -38,5 +39,13 @@ public class UsoDemoSingletonPrototype {
 		System.out.println(Pepe);
 		System.out.println(Ana);
 		
+		System.out.println("");
+		
+		DirectorEmpleado conHooks = context.getBean("myEmployeeWithInitandDestroy", DirectorEmpleado.class);
+		System.out.println("");
+		System.out.println("Evidenciando que se ejecutan los metodos de init y destroy: " + conHooks.getInforme());
+		System.out.println("");
+		
+		context.close();
 	}
 }

@@ -35,4 +35,10 @@
 	
 </bean>
 
+<bean id="myEmployeeWithInitandDestroy" 
+class="es.pildoras.IoC.DependencyInjection.DirectorEmpleado" 
+init-method="metodoInicial" destroy-method="metodoFinal">
+	<constructor-arg ref="myInform"></constructor-arg>
+</bean>
+
 </beans>
