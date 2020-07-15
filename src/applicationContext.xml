@@ -9,7 +9,18 @@
 	http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
-<bean id="myEmployee" class="es.pildoras.IoC.DirectorEmpleado"></bean>
+<bean id="myInform" class="es.pildoras.IoC.Informe"></bean>
+
+<bean id="myEmployee" class="es.pildoras.IoC.DirectorEmpleado">
+<constructor-arg ref="myInform"></constructor-arg>
+</bean>
+<bean id="myEmployee2" class="es.pildoras.IoC.JefeEmpleado">
+<constructor-arg ref="myInform"></constructor-arg>
+</bean>
+
+
+
+
 
 
 </beans>
