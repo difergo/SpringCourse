@@ -21,7 +21,17 @@
 
 
 <bean id="myEmployee3" class="es.pildoras.IoC.SecretarioEmpleado">
+	<!-- To set a property, the property name must be the method name without the word "set" and using lower camel case syntax -->
+	
 	<property name="informeNuevo" ref="myInform"></property>
+	<property name="email" value="secretary@company.com"></property>
+	<property name="nombreEmpresa" value="company"></property>
+</bean>
+
+<bean id="mySecondDirector" class="es.pildoras.IoC.DirectorEmpleado">
+	<constructor-arg ref="myInform"></constructor-arg>
+	<property name="email" value="management@company.com"></property>
+	<property name="nombreEmpresa" value="company"></property>
 </bean>
 
 
