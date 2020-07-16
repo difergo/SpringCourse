@@ -15,7 +15,7 @@ public class ComercialExperimentado implements Empleado {
 	@PostConstruct
 	public void postBean() {
 		System.out.println("___________________________________");
-		System.out.println("Ejecutado tras creación de bean");
+		System.out.println("Ejecutado tras creación de bean en clase: "+this.getClass().getName());
 		System.out.println("-----------------------------------");
 	}
 	
@@ -24,7 +24,7 @@ public class ComercialExperimentado implements Empleado {
 	@PreDestroy
 	public void preDestry() {
 		System.out.println("___________________________________");
-		System.out.println("Ejecutando antes de la destrucción del contenedor de spring");
+		System.out.println("Ejecutando antes de la destrucción del contenedor de spring en clase: "+this.getClass().getName());
 		System.out.println("-----------------------------------");
 	}
 	
