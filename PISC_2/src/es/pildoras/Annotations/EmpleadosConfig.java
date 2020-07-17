@@ -3,9 +3,11 @@ package es.pildoras.Annotations;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ComponentScan("es.pildoras.Annotations")
+@PropertySource("classpath:datosEmpresa.propiedades")
 public class EmpleadosConfig {
 	
 	//     Configuración de beans sin xml

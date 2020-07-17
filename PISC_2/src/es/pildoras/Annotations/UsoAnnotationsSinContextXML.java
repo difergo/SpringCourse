@@ -10,11 +10,11 @@ public class UsoAnnotationsSinContextXML {
 		
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EmpleadosConfig.class);
 		
-	/*	Empleado Antonio=context.getBean("ComercialExperimentado", Empleado.class);
+		Empleado Antonio=context.getBean("ComercialExperimentado", Empleado.class);
 		
 		System.out.println(Antonio.getTareas());
 		
-		System.out.println(Antonio.getInofrme());*/
+		System.out.println(Antonio.getInofrme());
 		
 		System.out.println();
 		
@@ -22,6 +22,14 @@ public class UsoAnnotationsSinContextXML {
 		
 		System.out.println("Configurado por código: "+empleado.getTareas());
 		System.out.println("Configurado por código: "+empleado.getInofrme());
+		
+		System.out.println();
+		
+		System.out.println("Director empleado, cargando data desde archivo de propiedaes");
+		DirectorFinanciero df = context.getBean("DirectorFinanciero", DirectorFinanciero.class);
+		System.out.println();
+		System.out.println(df.getEmail());
+		System.out.println(df.getNombreEmpresa());
 		
 		context.close();
 	}
