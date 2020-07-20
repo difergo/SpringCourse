@@ -1,0 +1,19 @@
+PISC_1 and PISC_2 projects import te libraries from a folder named "lib", it must contain all the Spring dependencies
+
+For PISC_3, all the dependencies must be inside "PISC_3\WebContent\WEB-INF\lib" folder
+
+PISC_3 also needs a Tomcat installation avalble to work on
+
+The repository contains the next files inside PISC_3\WebContent\WEB-INF\lib to ease deployment as they don't come with the Spring Framewok libraries:
+ * javax.servlet.jsp.jstl-1.2.1
+ * javax.servlet.jsp.jstl-api-1.2.1
+
+
+How to import external jars in eclipse:
+
+	* Right click project's root folder
+	* Select "Java Build Path" from the left side menu
+	* Select "Libraries" tab
+	* Click on "Add External JARs" if the jars are otside the project's folder or "Add JARs" if the jars are inside the project's folder
+	* Select all the required jars
+	* Click on "Apply and close"
