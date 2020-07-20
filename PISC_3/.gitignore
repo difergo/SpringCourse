@@ -1,0 +1,13 @@
+/build/
+.settings/
+
+# Eclipse Core      
+.project
+
+# JDT-specific (Eclipse Java Development Tools)     
+.classpath
+
+bin/
+
+# Spring libs
+WebContent/WEB-INF/lib/spring*
