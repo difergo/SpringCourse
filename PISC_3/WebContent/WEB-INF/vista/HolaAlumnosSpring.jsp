@@ -9,6 +9,13 @@
 <body>
 
 Hola ${param.nombreAlumno}. Bienvenido al curso
+<br>
+<br>
+Nombre en mayuscula: ${nombreMayus}
+<br>
+<br>
+
+<img alt="foto" src="${pageContext.request.contextPath}/resources/imgs/vasa.jpg">
 
 </body>
 </html>

@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Hola Alumno</title>
+
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/myStyle.css">
+
 </head>
 <body>
-	<form action="procesarFormulario" method="get">
+	<form action="procesarFormulario2" method="get">
 		<input type="text" name="nombreAlumno">
 		<input type="submit">
 	</form>
